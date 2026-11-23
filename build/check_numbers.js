@@ -25,7 +25,7 @@ for (const k of Object.keys(R.detect)) {
 }
 const E = A.conv(cat, A.D.filters.v.k);
 for (const h of R.hand) ok('hand #' + h.no, E[h.r][h.c], h.sum);
-ok('exam q2', A.conv(R.exam.q2_patch, A.D.filters.v.k)[0][0], 4);
+ok('exam q2', A.conv(R.exam.q2_patch, A.D.filters.v.k)[0][0], -2);
 ok('exam q3', JSON.stringify(A.pool(R.exam.q3_block)) === JSON.stringify([[3, 1], [1, 4]]) ? 1 : 0, 1);
 console.log(bad ? '불일치 ' + bad + '건' : '숫자 검산: 모두 일치');
 process.exit(bad ? 1 : 0);

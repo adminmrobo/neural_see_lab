@@ -230,7 +230,7 @@ def main():
     R['thresh'] = THRESH
 
     # 쪽지시험 정답 (손계산 문제)
-    q2 = [[0, 0, 1], [0, 0.5, 1], [0, 1, 1]]
+    q2 = [[1, 0, 0], [1, 0.5, 0], [0, 0, 1]]
     R['exam'] = {'q2_patch': q2, 'q2_sum': sum(q2[i][j] * FILTERS['v'][1][i][j] for i in range(3) for j in range(3)),
                  'q3_block': [[0, 2, 1, 0], [3, 1, 0, 0], [0, 0, 4, 2], [1, 0, 0, 0]]}
     R['exam']['q3_max'] = pool(R['exam']['q3_block'])

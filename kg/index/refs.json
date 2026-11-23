@@ -105,6 +105,48 @@
   }
  },
  {
+  "id": "hubel1962",
+  "type": "article-journal",
+  "title": "Receptive fields, binocular interaction and functional architecture in the cat's visual cortex",
+  "author": [
+   {
+    "family": "Hubel",
+    "given": "David H."
+   },
+   {
+    "family": "Wiesel",
+    "given": "Torsten N."
+   }
+  ],
+  "container-title": "Journal of Physiology",
+  "volume": "160",
+  "issue": "1",
+  "page": "106-154",
+  "issued": {
+   "date-parts": [
+    [
+     1962
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/hubel1962",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
   "id": "maisak2013",
   "type": "article-journal",
   "title": "A directional tuning map of Drosophila elementary motion detectors",

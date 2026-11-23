@@ -211,7 +211,7 @@ def s3():
                              ' / '.join(' '.join('%g' % v for v in r) for r in blk), '%g' % mx[0][0], '%g' % mx[0][1], '%g' % mx[1][0], '%g' % mx[1][1],
                              '%g' % av[0][0], '%g' % av[0][1], '%g' % av[1][0], '%g' % av[1][1]),
                          '가장 큰 거 고르기는 저도 해요! 숫자 16개가 4개로 줄었는데 굵은 선(3)은 그대로 남았네요.')) +
-             pair('생물의 눈에서는', '신경세포는 자극이 일정 세기를 넘어야 신호를 내보냅니다. 허블과 비셀은 또, 조금 넓은 범위 안 어디에 선이 있든 반응하는 세포(복합 세포)도 찾았어요.',
+             pair('생물의 눈에서는', '신경세포는 자극이 일정 세기를 넘어야 신호를 내보냅니다. 허블과 비셀은 1962년 후속 연구에서, 조금 넓은 범위 안 어디에 선이 있든 반응하는 세포를 "복합 세포"로 정리했어요.',
                   '신경망에서는', 'ReLU는 "넘어야 신호"를, 최댓값 풀링은 "근처 어디든 있으면 반응"을 흉내 냅니다. 1980년 후쿠시마의 네오코그니트론이 이 생각을 처음 신경망으로 옮겼습니다. 다만 실제 세포의 반응은 0과 1처럼 깔끔하지 않습니다.') +
              kit('x3', 'e01', '풀링 체', '구멍 하나가 2×2인 체입니다. 경계 지도를 붓고 흔들면 구멍마다 가장 큰 숫자 하나만 걸러집니다. 아래 패널에서 오른쪽 7×7 지도의 점을 누르면 원래 어느 2×2에서 왔는지 보입니다.') +
              talk([('doc', 'think', '지도를 4분의 1로 줄이면 잃는 게 없을까?'),
@@ -315,13 +315,13 @@ def exam_sec():
     form = ('<form class="exam" id="examform" onsubmit="return false">'
             '<p class="small muted">시험 시간 10분(권장) · 계산기 없이 · 본 문항 4개 중 3개 이상이면 합격 · 결과는 저장하지 않습니다.</p>'
             '<fieldset><legend>1번 (초파리 연구원 출제 · 생물의 눈과 비교)</legend><p>초파리 낱눈 하나, 사람 망막의 시각 세포 하나처럼 "한 점의 밝기"를 맡는 것은 신경망에서 무엇일까요?</p>'
-            '<label><input type="radio" name="eq1" value="a"> 그림 전체의 모양 하나</label><label><input type="radio" name="eq1" value="b"> 픽셀 하나의 진하기 숫자 (16×16이면 256개)</label>'
+            '<label><input type="radio" name="eq1" value="a"> 그림 전체의 모양 하나</label><label><input type="radio" name="eq1" value="b"> 픽셀 하나의 진하기 숫자</label>'
             '<label><input type="radio" name="eq1" value="c"> 3×3 필터</label><label><input type="radio" name="eq1" value="d"> 풀링 결과</label></fieldset>'
-            '<fieldset><legend>2번 (주판봇 출제 · 계산)</legend><p>아래 3×3 진하기에 세로 경계 필터를 대면 점수(합)는?</p><div class="pair2"><div><small>진하기</small>' + mat(q2) + '</div><div><small>세로 경계 필터</small>' + fm + '</div></div>'
+            '<fieldset><legend>2번 (주판봇 출제 · 계산)</legend><p>아래 3×3 진하기에 세로 경계 필터를 대면 점수(합)는? 부호까지 쓰세요.</p><div class="pair2"><div><small>진하기</small>' + mat(q2) + '</div><div><small>세로 경계 필터</small>' + fm + '</div></div>'
             '<label>점수: <input type="text" id="ex2" inputmode="decimal" autocomplete="off" aria-label="2번 답"></label></fieldset>'
             '<fieldset><legend>3번 (주판봇 출제 · 계산)</legend><p>아래 4×4를 2×2 최댓값 풀링하면? (왼쪽 위, 오른쪽 위, 왼쪽 아래, 오른쪽 아래 순)</p>' + mat(q3, 'mini') +
-            '<p><input type="text" id="ex3a" inputmode="decimal" aria-label="3번 왼쪽 위"> <input type="text" id="ex3b" inputmode="decimal" aria-label="3번 오른쪽 위"> '
-            '<input type="text" id="ex3c" inputmode="decimal" aria-label="3번 왼쪽 아래"> <input type="text" id="ex3d" inputmode="decimal" aria-label="3번 오른쪽 아래"></p></fieldset>'
+            '<p><input type="text" type="text" id="ex3a" inputmode="decimal" aria-label="3번 왼쪽 위"> <input type="text" type="text" id="ex3b" inputmode="decimal" aria-label="3번 오른쪽 위"> '
+            '<input type="text" type="text" id="ex3c" inputmode="decimal" aria-label="3번 왼쪽 아래"> <input type="text" type="text" id="ex3d" inputmode="decimal" aria-label="3번 오른쪽 아래"></p></fieldset>'
             '<fieldset><legend>4번 (박사 출제 · 원리)</legend><p>부품 개수만 세는 판정기가 "뒤섞인 고양이"(입이 맨 위, 귀가 맨 아래)를 고양이라고 했습니다. 무엇을 빠뜨렸나요?</p>'
             '<label><input type="radio" name="eq4" value="a"> 필터의 개수</label><label><input type="radio" name="eq4" value="b"> 픽셀의 개수</label>'
             '<label><input type="radio" name="eq4" value="c"> 부품이 놓인 자리(배치)</label><label><input type="radio" name="eq4" value="d"> 그림의 색</label></fieldset>'
@@ -354,12 +354,15 @@ def sum_sec():
         ('풀링 = 복합 세포', '근처 어디든 있으면 반응'), ('깊은 층 = 얼굴 영역', '부품과 전체 모양에 반응')]) + '</div>')
     lim = bridge('field', '비유의 한계', '생물의 눈과 신경망은 "단계마다 더 큰 모양을 본다"는 큰 줄기가 닮았을 뿐, 세포 하나하나가 필터 하나와 똑같이 일하는 것은 아닙니다. 생물의 시각은 움직임·색·주의(어디를 볼지)가 함께 작동합니다.',
                  '이 페이지의 대응표는 기억을 돕는 비유입니다. 뇌가 합성곱을 계산한다는 뜻이 아닙니다.')
+    meet = aicheck('도입 회의에서 물을 세 가지', '<ol><li><b>무엇을 보고 판단하나요?</b> 판단 근거가 된 부분(부품)을 그림 위에 표시해 보여 줄 수 있는지 묻습니다.</li>'
+                   '<li><b>엉뚱한 것을 근거로 삼지 않나요?</b> 배경·지붕·글자처럼 대상이 아닌 것을 부품으로 읽은 사례를 확인했는지 묻습니다.</li>'
+                   '<li><b>우리 현장 사진에서도 되나요?</b> 각도·크기·조명이 다른 우리 사진으로 따로 시험한 숫자를 달라고 합니다.</li></ol>')
     nxt = ('<div class="recap"><h4>보너스 문제의 답과 다음 공부</h4><p>실제 신경망은 필터 숫자를 사람이 정하지 않습니다. 정답이 달린 사진을 보여 주고, 틀린 만큼 필터 숫자를 조금씩 고치기를 되풀이합니다(학습, 역전파). '
            '학습을 마친 신경망의 첫 층 필터를 들여다보면 이 페이지의 세로·가로 경계 필터와 닮은 모양이 저절로 생겨 있는 경우가 많습니다(Krizhevsky 외 2012).</p>'
            '<p>이어서 보기: <a href="https://adminmrobo.github.io/backprop_lab/">역전파 연구실</a> (필터 숫자를 스스로 고치는 법) · '
            '<a href="https://adminmrobo.github.io/cnn_face_game_lab/">CNN 특집 — 얼굴 알아맞히기 게임</a> (더 큰 CNN으로 얼굴 맞히기) · '
            '<a href="https://adminmrobo.github.io/neural_network_atlas/">신경망 도감</a></p></div>')
-    return section('sum', '정리 — 시험 전날 밤 한 장', tb + terms + lim + nxt +
+    return section('sum', '정리 — 시험 전날 밤 한 장', tb + terms + lim + meet + nxt +
                    say('doc', 'verdict', '네 단계를 한 문장으로: <b>숫자로 받고, 필터로 선을 찾고, 강한 것만 남겨 줄이고, 층을 쌓아 부품과 그 자리를 본다.</b> 이 문장 하나만 써도 시험의 절반은 됩니다.'))
 
 
@@ -389,6 +392,7 @@ def build_page():
                crowd('X1·X2·X3가 채점표를 정리하고 하루에게 박수를 보냅니다.', moods=('e01', 'e16', 'e01'), label='교보재 담당'))
     b += footer([('참고 영상 (장면 구성과 4단계 흐름)', '사용자가 제공한 짧은 영상 「HOW A NEURAL NET SEES · PART 8」(약 20초, 제작자 표기 없음). 그림·숫자·코드·대사는 이 연구실이 새로 만들었습니다.'),
                  ('고양이 시각 피질의 방향 선택 세포', 'Hubel, D. H., &amp; Wiesel, T. N. (1959). Receptive fields of single neurones in the cat\'s striate cortex. <i>Journal of Physiology</i>, 148(3), 574–591.'),
+                 ('복합 세포', 'Hubel, D. H., &amp; Wiesel, T. N. (1962). Receptive fields, binocular interaction and functional architecture in the cat\'s visual cortex. <i>Journal of Physiology</i>, 160(1), 106–154.'),
                  ('초파리의 경계 움직임 감지 세포 T4·T5', 'Maisak, M. S. 외 (2013). A directional tuning map of Drosophila elementary motion detectors. <i>Nature</i>, 500, 212–216.'),
                  ('네오코그니트론 (풀링의 생물학적 착상)', 'Fukushima, K. (1980). Neocognitron. <i>Biological Cybernetics</i>, 36(4), 193–202.'),
                  ('합성곱 신경망 (CNN)', 'LeCun, Y., Bottou, L., Bengio, Y., &amp; Haffner, P. (1998). Gradient-based learning applied to document recognition. <i>Proceedings of the IEEE</i>, 86(11), 2278–2324.'),

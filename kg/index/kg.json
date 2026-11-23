@@ -234,7 +234,7 @@
    },
    "source": [
     {
-     "ref": "hubel1959",
+     "ref": "hubel1962",
      "loc": ""
     }
    ]
@@ -485,6 +485,21 @@
    "label": {
     "ko": "Hubel 외 (1959) Journal of Physiology",
     "en": "Receptive fields of single neurones in the cat's striate cortex"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/hubel1962",
+   "type": "Work",
+   "label": {
+    "ko": "Hubel 외 (1962) Journal of Physiology",
+    "en": "Receptive fields, binocular interaction and functional architecture in the cat's visual cortex"
    },
    "page": "index",
    "anchor": "#export",
@@ -982,7 +997,7 @@
   {
    "s": "lab:bio/complex-cell",
    "p": "lab:assertedIn",
-   "o": "lab:work/hubel1959",
+   "o": "lab:work/hubel1962",
    "anchor": "#s3",
    "confidence": "high"
   },

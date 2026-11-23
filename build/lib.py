@@ -287,6 +287,7 @@ EXTRA_CSS = '''
 @media (max-width:860px){.grid2{grid-template-columns:1fr}}
 
 @media (min-width:761px){.cover .fallback .pxrow{width:50%}.cover .fallback .pxrow img{width:15.5%}}
+.say[hidden]{display:none!important}
 .kit{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--rule);background:#fbfcfd;border-left:4px solid var(--c-x);border-radius:14px;padding:10px 14px;margin:14px 0}
 .kit>img{width:56px;height:56px;object-fit:contain;flex:none;image-rendering:pixelated}
 .kit .lab{display:block;font-size:12.5px;font-weight:700;color:var(--c-x)}

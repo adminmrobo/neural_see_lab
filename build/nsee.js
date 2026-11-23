@@ -58,14 +58,14 @@ function btnGroup(sel,cb){var bs=$$(sel);bs.forEach(function(b){b.addEventListen
 (function(){var cv=$('#cv2');if(!cv)return;var f='v',key='cat',p=0,play=false,acc=0,speed=6,img=IM.cat,E=conv(img,D.filters.v.k);
   function upd(){E=conv(img,D.filters[f].k)}
   function draw(){var o=fit(cv),g=o.c,W=o.W;var narrow=W<700;var cs=narrow?Math.max(11,Math.floor((W-20)/16)):Math.min(22,Math.floor((W-260)/30));cs=Math.max(10,cs);
-    var H=narrow?cs*16+cs*14+170:cs*16+60;if(Math.abs(o.H-H)>1){o=fit(cv,H);g=o.c}g.clearRect(0,0,W,o.H);
+    var H=narrow?cs*16+cs*14+190:cs*16+60;if(Math.abs(o.H-H)>1){o=fit(cv,H);g=o.c}g.clearRect(0,0,W,o.H);
     var r=Math.floor(p/14),c=p%14,x0=10,y0=26;label(g,'그림 (16×16)',x0,18,INK,13);
     drawMat(g,x0,y0,cs,img,function(v){return shade(v)});box(g,x0+c*cs,y0+r*cs,cs*3,cs*3,'#1e55c8',3);
     var fx=narrow?x0:x0+cs*16+20,fy=narrow?y0+cs*16+16:y0;var k=D.filters[f].k,ks=26;
     label(g,'필터',fx,fy+10,INK,13);
     for(var i=0;i<3;i++)for(var j=0;j<3;j++){var v=k[i][j];g.fillStyle=v>0?'#e7f5ec':(v<0?'#fcebea':'#f6f8fa');g.fillRect(fx+j*ks,fy+16+i*ks,ks-2,ks-2);g.fillStyle=v>0?'#13733a':(v<0?'#c9302c':MUTED);g.font='13px IBM Plex Sans KR';g.textAlign='center';g.textBaseline='middle';g.fillText((v>0?'+':'')+v,fx+j*ks+ks/2-1,fy+16+i*ks+ks/2)}
     var s=E[r][c];label(g,'합 '+f1(s),fx,fy+16+3*ks+20,INK,15);label(g,'ReLU '+f1(Math.max(0,s)),fx,fy+16+3*ks+42,s>0?'#13733a':MUTED,15);
-    var mx=narrow?x0:fx+110,my=narrow?fy+16+3*ks+60:y0;var ms=narrow?cs:Math.max(8,Math.min(cs,Math.floor((W-mx-10)/14)));
+    var mx=narrow?x0:fx+110,my=narrow?fy+16+3*ks+78:y0;var ms=narrow?cs:Math.max(8,Math.min(cs,Math.floor((W-mx-10)/14)));
     label(g,'경계 지도 (14×14) · 자리 '+(p+1)+'/196',mx,my-8,INK,13);
     drawMat(g,mx,my,ms,E.map(function(row,ri){return row.map(function(v,ci){return (ri*14+ci)<=p?v:NaN})}),function(v){return isNaN(v)?'#fbfcfd':signed(v)});
     box(g,mx+c*ms,my+r*ms,ms,ms,'#1e55c8',2);
@@ -162,10 +162,10 @@ function btnGroup(sel,cb){var bs=$$(sel);bs.forEach(function(b){b.addEventListen
 
 /* ── 쪽지시험 ── */
 (function(){var ex=$('#examform');if(!ex)return;
-  function num(id){var v=($('#'+id).value||'').trim().replace(',','.');return v===''?NaN:+v}
+  function num(id){var v=($('#'+id).value||'').trim().replace(',','.').replace(/[−–]/g,'-');return v===''?NaN:+v}
   $('#examgo').addEventListener('click',function(){var sc=0,fb=[];
     var q1=$('input[name=eq1]:checked',ex);var ok1=q1&&q1.value==='b';sc+=ok1?1:0;fb.push([ok1,'1번',ok1?'맞아요. 픽셀마다 진하기 숫자 하나, 16×16이면 숫자 256개입니다.':'신경망은 그림을 "모양"으로 받지 않아요. 픽셀마다 숫자 하나, 숫자판 전체를 받습니다. (1단계)']);
-    var a2=num('ex2');var ok2=Math.abs(a2-4)<0.01;sc+=ok2?1:0;fb.push([ok2,'2번',ok2?'맞아요. 오른쪽 열 (1×1)+(2×1)+(1×1)=4, 가운데 열은 필터가 0이라 빠지고, 왼쪽 열은 진하기 0이라 0입니다.':'초파리의 흔한 실수: 가운데 0.5를 더하는 것. 필터 가운데 열은 0이라 곱하면 0이에요. 오른쪽 열만 (1×1)+(2×1)+(1×1)=4. (2단계)']);
+    var a2=num('ex2');var ok2=Math.abs(a2+2)<0.01;sc+=ok2?1:0;fb.push([ok2,'2번',ok2?'맞아요. 왼쪽 열 (−1×1)+(−2×1)+(−1×0) = −3, 오른쪽 열 (+1×0)+(+2×0)+(+1×1) = +1, 가운데 열은 필터가 0이라 빠져서 합 −2. 음수이니 왼쪽이 더 진한 세로 경계입니다.':'초파리의 흔한 실수 두 가지: 가운데 0.5를 더하는 것(필터 가운데 열은 0이라 곱하면 0), 그리고 왼쪽 열의 빼기를 잊는 것. 왼쪽 열 (−1×1)+(−2×1)+(−1×0) = −3, 오른쪽 열 +1 → 합 −2. 부호는 방향입니다. (2단계)']);
     var a3=[num('ex3a'),num('ex3b'),num('ex3c'),num('ex3d')],t3=[3,1,1,4];var ok3=a3.every(function(v,i){return Math.abs(v-t3[i])<0.01});sc+=ok3?1:0;
     fb.push([ok3,'3번',ok3?'맞아요. 2×2마다 가장 큰 값: 3, 1, 1, 4.':'2×2 네 묶음마다 가장 큰 값만 남겨요. 왼쪽 위 (0,2,3,1) → 3, 오른쪽 위 (1,0,0,0) → 1, 왼쪽 아래 (0,0,1,0) → 1, 오른쪽 아래 (4,2,0,0) → 4. 평균을 내면 틀려요. (3단계)']);
     var q4=$('input[name=eq4]:checked',ex);var ok4=q4&&q4.value==='c';sc+=ok4?1:0;fb.push([ok4,'4번',ok4?'맞아요. 부품의 개수만이 아니라 놓인 자리(귀는 위, 입은 아래)까지 봐야 해요.':'뒤섞인 고양이도 귀·눈·입은 다 있어요. 빠진 것은 "자리"입니다. (4단계)']);

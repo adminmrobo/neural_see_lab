@@ -15,7 +15,7 @@ async def main():
         # 제출 전에는 결과가 비어 있어야 한다
         assert await pg.inner_text('#examres') == ''
         # 정답
-        await pg.check('input[name=eq1][value=b]'); await pg.fill('#ex2', '4'); 
+        await pg.check('input[name=eq1][value=b]'); await pg.fill('#ex2', '−2'); 
         for k, v in zip('abcd', '3114'): await pg.fill('#ex3' + k, v)
         await pg.check('input[name=eq4][value=c]'); await pg.check('input[name=eq5][value=a]')
         await pg.click('#examgo'); s1 = await pg.inner_text('#examres .score')

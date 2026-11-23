@@ -13,6 +13,8 @@ REFS = {
                     'URL': 'https://github.com/adminmrobo/neural_see_lab', 'year': 2026, 'role': 'data', 'verified': V(), 'checkedBy': '이 저장소 code/analysis.py', 'checkedSource': 'repo'},
     'hubel1959': {'type': 'article-journal', 'title': "Receptive fields of single neurones in the cat's striate cortex", 'author': [{'family': 'Hubel', 'given': 'David H.'}, {'family': 'Wiesel', 'given': 'Torsten N.'}],
                   'container-title': 'Journal of Physiology', 'volume': '148', 'issue': '3', 'page': '574-591', 'year': 1959, 'role': 'background', 'verified': V()},
+    'hubel1962': {'type': 'article-journal', 'title': "Receptive fields, binocular interaction and functional architecture in the cat's visual cortex", 'author': [{'family': 'Hubel', 'given': 'David H.'}, {'family': 'Wiesel', 'given': 'Torsten N.'}],
+                  'container-title': 'Journal of Physiology', 'volume': '160', 'issue': '1', 'page': '106-154', 'year': 1962, 'role': 'background', 'verified': V()},
     'maisak2013': {'type': 'article-journal', 'title': 'A directional tuning map of Drosophila elementary motion detectors', 'author': [{'family': 'Maisak', 'given': 'Matthew S.'}, {'family': 'Haag', 'given': 'Juergen'}, {'family': 'Borst', 'given': 'Alexander'}],
                    'container-title': 'Nature', 'volume': '500', 'page': '212-216', 'year': 2013, 'role': 'background', 'verified': V()},
     'fukushima1980': {'type': 'article-journal', 'title': 'Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position', 'author': [{'family': 'Fukushima', 'given': 'Kunihiko'}],
@@ -88,7 +90,7 @@ def pages():
     du = R['duel']['right1']; sc = R['detect']['scrambled']['judge']
     QMAP.update({'q1': 'lab:concept/pixel-grid', 'q2': 'lab:method/convolution-filter', 'q3': 'lab:method/max-pooling', 'q4': 'lab:concept/feature-hierarchy'})
     P['index'] = ('index', '0', '신경망은 고양이를 어떻게 "볼까" — 쪽지시험 대비반', ['lab:concept/cnn-vision-pipeline', 'lab:method/convolution-filter'],
-                  ['ahn2026nsee', 'video_nnsees8', 'hubel1959', 'maisak2013', 'fukushima1980', 'lecun1998', 'krizhevsky2012', 'zeiler2014', 'sabour2017'], [
+                  ['ahn2026nsee', 'video_nnsees8', 'hubel1959', 'hubel1962', 'maisak2013', 'fukushima1980', 'lecun1998', 'krizhevsky2012', 'zeiler2014', 'sabour2017'], [
         ('lab:concept/cnn-vision-pipeline', 'Concept', '신경망이 그림을 보는 네 단계', 'How a CNN sees: four steps', '#map', 1, '숫자 격자 → 필터 → ReLU·풀링 → 깊은 층의 부품·전체', 'lecun1998'),
         ('lab:concept/pixel-grid', 'Concept', '픽셀 격자 (그림 = 숫자 표)', 'Image as a pixel grid', '#s1', 1, '픽셀마다 진하기 숫자 하나, 16×16 = 256개'),
         ('lab:bio/photoreceptor-ommatidium', 'BioAnalogue', '시각 세포·초파리 낱눈', 'Photoreceptors and ommatidia', '#s1', 2, '한 점의 밝기를 맡는 생물의 감각 단위'),
@@ -98,7 +100,7 @@ def pages():
         ('lab:claim/sign-is-direction', 'Claim', '필터 점수의 부호는 방향, 크기는 세기 (−3.0은 반대 방향의 강한 경계)', 'Sign encodes direction', '#s2', 2, ''),
         ('lab:method/relu', 'Method', 'ReLU (음수는 0)', 'ReLU', '#s3', 2, 'max(0, x)'),
         ('lab:method/max-pooling', 'Method', '2×2 최댓값 풀링 (14×14 → 7×7)', 'Max pooling', '#s3', 1, '2×2마다 가장 큰 값 하나', 'fukushima1980'),
-        ('lab:bio/complex-cell', 'BioAnalogue', '복합 세포', 'Complex cells', '#s3', 2, '조금 넓은 범위 어디든 선이 있으면 반응', 'hubel1959'),
+        ('lab:bio/complex-cell', 'BioAnalogue', '복합 세포', 'Complex cells', '#s3', 2, '조금 넓은 범위 어디든 선이 있으면 반응', 'hubel1962'),
         ('lab:claim/pooling-shift', 'Claim', '1픽셀 옮긴 고양이의 지도 닮음: 풀링 %.1f%%, 풀링 안 함 %.1f%%' % (du['pool'] * 100, du['nopool'] * 100), 'Pooling tolerates small shifts', '#duel', 2, '', 'ahn2026nsee'),
         ('lab:limitation/pooling-loses-position', 'Limitation', '풀링은 정확한 자리를 흐린다', 'Pooling blurs position', '#s3', 2, ''),
         ('lab:concept/receptive-field', 'Concept', '보는 범위 (수용 영역) 3 → 4 → 8 → 10 → 18', 'Receptive field growth', '#s4', 2, '층을 쌓을수록 한 점이 원본에서 보는 범위가 넓어짐'),
