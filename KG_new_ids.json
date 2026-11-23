@@ -1,0 +1,166 @@
+{
+ "series": "neural_see_lab",
+ "date": "2026-11-23",
+ "new_ids": {
+  "lab:concept/cnn-vision-pipeline": {
+   "label": {
+    "ko": "신경망이 그림을 보는 네 단계",
+    "en": "How a CNN sees: four steps"
+   },
+   "type": "Concept",
+   "first_page": "index"
+  },
+  "lab:concept/pixel-grid": {
+   "label": {
+    "ko": "픽셀 격자 (그림 = 숫자 표)",
+    "en": "Image as a pixel grid"
+   },
+   "type": "Concept",
+   "first_page": "index"
+  },
+  "lab:bio/photoreceptor-ommatidium": {
+   "label": {
+    "ko": "시각 세포·초파리 낱눈",
+    "en": "Photoreceptors and ommatidia"
+   },
+   "type": "BioAnalogue",
+   "first_page": "index"
+  },
+  "lab:method/convolution-filter": {
+   "label": {
+    "ko": "3×3 필터 합성곱 (소벨 경계 필터)",
+    "en": "Convolution with 3×3 edge filters"
+   },
+   "type": "Method",
+   "first_page": "index"
+  },
+  "lab:concept/edge-map": {
+   "label": {
+    "ko": "경계 지도 (특징 지도)",
+    "en": "Edge map (feature map)"
+   },
+   "type": "Concept",
+   "first_page": "index"
+  },
+  "lab:bio/orientation-cell": {
+   "label": {
+    "ko": "방향 선택 세포 (고양이 시각 피질), T4·T5 (초파리)",
+    "en": "Orientation-selective cells; Drosophila T4/T5"
+   },
+   "type": "BioAnalogue",
+   "first_page": "index"
+  },
+  "lab:claim/sign-is-direction": {
+   "label": {
+    "ko": "필터 점수의 부호는 방향, 크기는 세기 (−3.0은 반대 방향의 강한 경계)",
+    "en": "Sign encodes direction"
+   },
+   "type": "Claim",
+   "first_page": "index"
+  },
+  "lab:method/relu": {
+   "label": {
+    "ko": "ReLU (음수는 0)",
+    "en": "ReLU"
+   },
+   "type": "Method",
+   "first_page": "index"
+  },
+  "lab:method/max-pooling": {
+   "label": {
+    "ko": "2×2 최댓값 풀링 (14×14 → 7×7)",
+    "en": "Max pooling"
+   },
+   "type": "Method",
+   "first_page": "index"
+  },
+  "lab:bio/complex-cell": {
+   "label": {
+    "ko": "복합 세포",
+    "en": "Complex cells"
+   },
+   "type": "BioAnalogue",
+   "first_page": "index"
+  },
+  "lab:claim/pooling-shift": {
+   "label": {
+    "ko": "1픽셀 옮긴 고양이의 지도 닮음: 풀링 83.4%, 풀링 안 함 64.4%",
+    "en": "Pooling tolerates small shifts"
+   },
+   "type": "Claim",
+   "first_page": "index"
+  },
+  "lab:limitation/pooling-loses-position": {
+   "label": {
+    "ko": "풀링은 정확한 자리를 흐린다",
+    "en": "Pooling blurs position"
+   },
+   "type": "Limitation",
+   "first_page": "index"
+  },
+  "lab:concept/receptive-field": {
+   "label": {
+    "ko": "보는 범위 (수용 영역) 3 → 4 → 8 → 10 → 18",
+    "en": "Receptive field growth"
+   },
+   "type": "Concept",
+   "first_page": "index"
+  },
+  "lab:concept/feature-hierarchy": {
+   "label": {
+    "ko": "선 → 부품 → 전체 (특징의 위계)",
+    "en": "Feature hierarchy"
+   },
+   "type": "Concept",
+   "first_page": "index"
+  },
+  "lab:claim/scrambled-fools-count": {
+   "label": {
+    "ko": "뒤섞인 고양이: 부품 5개를 모두 찾지만 자리 판정에서 탈락",
+    "en": "Part counting is fooled by scrambled faces"
+   },
+   "type": "Claim",
+   "first_page": "index"
+  },
+  "lab:limitation/hand-set-filters": {
+   "label": {
+    "ko": "이 페이지의 필터·부품 탐지기는 사람이 정한 설명용 (실제는 학습)",
+    "en": "Filters are hand-set here"
+   },
+   "type": "Limitation",
+   "first_page": "index"
+  },
+  "lab:sim/nsee-filter-scan": {
+   "label": {
+    "ko": "필터 훑기 패널",
+    "en": "Filter scan lab"
+   },
+   "type": "Simulation",
+   "first_page": "index"
+  },
+  "lab:sim/nsee-part-judge": {
+   "label": {
+    "ko": "부품 판정 패널 (개수 vs 자리)",
+    "en": "Part judge lab"
+   },
+   "type": "Simulation",
+   "first_page": "index"
+  },
+  "lab:task/nsee-exam": {
+   "label": {
+    "ko": "쪽지시험 4문항 + 보너스",
+    "en": "Quiz: four items plus bonus"
+   },
+   "type": "Task",
+   "first_page": "index"
+  },
+  "lab:question/what-did-it-see": {
+   "label": {
+    "ko": "AI가 \"고양이 99%\"라고 할 때 무엇을 보고 그렇게 말했나?",
+    "en": "What did the model look at?"
+   },
+   "type": "Question",
+   "first_page": "index"
+  }
+ }
+}

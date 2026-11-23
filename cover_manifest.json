@@ -1,0 +1,100 @@
+{
+ "series_ko": "AI 기초 · 컴퓨터 비전 (CNN)",
+ "title_ko": "신경망이 보는 법 연구실 (neural_see_lab) — 신경망은 고양이를 어떻게 \"볼까\"",
+ "site_title": "신경망은 고양이를 어떻게 \"볼까\" — 쪽지시험 대비반",
+ "site_url": "https://adminmrobo.github.io/neural_see_lab/",
+ "ontology": {
+  "pages": [
+   {
+    "path": "index.html",
+    "kg": true,
+    "export": true
+   }
+  ],
+  "files": [
+   "kg/index/kg.json"
+  ]
+ },
+ "i18n": {
+  "langs": [
+   "ko"
+  ],
+  "pages": {
+   "ko": 1
+  },
+  "readme_langs": [
+   "ko"
+  ]
+ },
+ "languages": [
+  "ko"
+ ],
+ "items": [
+  {
+   "id": "cover_00",
+   "role": "cover",
+   "page": "index.html",
+   "path": "img/cover_00.webp",
+   "size": [
+    1920,
+    1080
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "sia",
+    "moa",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": "see docs/COVER_PROMPTS_neural_see_lab.md#cover_00",
+   "source_of": null,
+   "status": "missing",
+   "alt_ko": "쪽지시험 전날, 하루가 픽셀 고양이 그림 앞에서 인턴 둘을 가르치고 출제위원 셋이 뒤에서 지켜보는 강의실"
+  },
+  {
+   "id": "thumb_00",
+   "role": "thumb",
+   "path": "img/thumb_00.webp",
+   "size": [
+    1200,
+    800
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "sia",
+    "moa",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_00",
+   "status": "missing"
+  },
+  {
+   "id": "og_00",
+   "role": "og",
+   "path": "img/og_00.webp",
+   "size": [
+    1200,
+    630
+   ],
+   "characters": [
+    "doc",
+    "asst",
+    "sia",
+    "moa",
+    "fly",
+    "jupanbot"
+   ],
+   "robot": "jupanbot-v2",
+   "prompt_en": null,
+   "source_of": "cover_00",
+   "status": "missing"
+  }
+ ],
+ "updated": "2026-11-23"
+}

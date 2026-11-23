@@ -1,0 +1,365 @@
+[
+ {
+  "id": "ahn2026nsee",
+  "type": "dataset",
+  "title": "신경망이 보는 법 연구실 설명용 데이터 (16×16 픽셀 그림·필터·부품 탐지기)",
+  "author": [
+   {
+    "family": "안",
+    "given": "상선"
+   }
+  ],
+  "publisher": "(주)M-Robo",
+  "URL": "https://github.com/adminmrobo/neural_see_lab",
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/ahn2026nsee",
+   "role": "data",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "이 저장소 code/analysis.py",
+   "checkedSource": "repo"
+  }
+ },
+ {
+  "id": "video_nnsees8",
+  "type": "motion_picture",
+  "title": "HOW A NEURAL NET SEES · PART 8 (짧은 영상, 사용자 제공)",
+  "author": [
+   {
+    "family": "제작자 표기 없음",
+    "given": ""
+   }
+  ],
+  "lab": {
+   "work": "lab:work/video_nnsees8",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": false,
+    "year": false,
+    "container": false,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "사용자가 준 영상 파일을 직접 확인 (2026-11-23)",
+   "checkedSource": "file"
+  }
+ },
+ {
+  "id": "hubel1959",
+  "type": "article-journal",
+  "title": "Receptive fields of single neurones in the cat's striate cortex",
+  "author": [
+   {
+    "family": "Hubel",
+    "given": "David H."
+   },
+   {
+    "family": "Wiesel",
+    "given": "Torsten N."
+   }
+  ],
+  "container-title": "Journal of Physiology",
+  "volume": "148",
+  "issue": "3",
+  "page": "574-591",
+  "issued": {
+   "date-parts": [
+    [
+     1959
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/hubel1959",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "maisak2013",
+  "type": "article-journal",
+  "title": "A directional tuning map of Drosophila elementary motion detectors",
+  "author": [
+   {
+    "family": "Maisak",
+    "given": "Matthew S."
+   },
+   {
+    "family": "Haag",
+    "given": "Juergen"
+   },
+   {
+    "family": "Borst",
+    "given": "Alexander"
+   }
+  ],
+  "container-title": "Nature",
+  "volume": "500",
+  "page": "212-216",
+  "issued": {
+   "date-parts": [
+    [
+     2013
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/maisak2013",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "fukushima1980",
+  "type": "article-journal",
+  "title": "Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position",
+  "author": [
+   {
+    "family": "Fukushima",
+    "given": "Kunihiko"
+   }
+  ],
+  "container-title": "Biological Cybernetics",
+  "volume": "36",
+  "issue": "4",
+  "page": "193-202",
+  "issued": {
+   "date-parts": [
+    [
+     1980
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/fukushima1980",
+   "role": "method",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "lecun1998",
+  "type": "article-journal",
+  "title": "Gradient-based learning applied to document recognition",
+  "author": [
+   {
+    "family": "LeCun",
+    "given": "Yann"
+   },
+   {
+    "family": "Bottou",
+    "given": "Léon"
+   },
+   {
+    "family": "Bengio",
+    "given": "Yoshua"
+   },
+   {
+    "family": "Haffner",
+    "given": "Patrick"
+   }
+  ],
+  "container-title": "Proceedings of the IEEE",
+  "volume": "86",
+  "issue": "11",
+  "page": "2278-2324",
+  "issued": {
+   "date-parts": [
+    [
+     1998
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/lecun1998",
+   "role": "method",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "krizhevsky2012",
+  "type": "paper-conference",
+  "title": "ImageNet classification with deep convolutional neural networks",
+  "author": [
+   {
+    "family": "Krizhevsky",
+    "given": "Alex"
+   },
+   {
+    "family": "Sutskever",
+    "given": "Ilya"
+   },
+   {
+    "family": "Hinton",
+    "given": "Geoffrey E."
+   }
+  ],
+  "container-title": "NeurIPS 2012",
+  "issued": {
+   "date-parts": [
+    [
+     2012
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/krizhevsky2012",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "zeiler2014",
+  "type": "paper-conference",
+  "title": "Visualizing and understanding convolutional networks",
+  "author": [
+   {
+    "family": "Zeiler",
+    "given": "Matthew D."
+   },
+   {
+    "family": "Fergus",
+    "given": "Rob"
+   }
+  ],
+  "container-title": "ECCV 2014",
+  "issued": {
+   "date-parts": [
+    [
+     2014
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/zeiler2014",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "sabour2017",
+  "type": "paper-conference",
+  "title": "Dynamic routing between capsules",
+  "author": [
+   {
+    "family": "Sabour",
+    "given": "Sara"
+   },
+   {
+    "family": "Frosst",
+    "given": "Nicholas"
+   },
+   {
+    "family": "Hinton",
+    "given": "Geoffrey E."
+   }
+  ],
+  "container-title": "NeurIPS 2017",
+  "issued": {
+   "date-parts": [
+    [
+     2017
+    ]
+   ]
+  },
+  "lab": {
+   "work": "lab:work/sabour2017",
+   "role": "background",
+   "supports": [],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 참고문헌 목록에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ }
+]

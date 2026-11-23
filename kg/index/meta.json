@@ -1,0 +1,47 @@
+{
+ "title": "신경망은 고양이를 어떻게 \"볼까\" — 쪽지시험 대비반",
+ "number": "0",
+ "series": "신경망이 보는 법 연구실 (neural_see_lab)",
+ "about": [
+  "lab:concept/cnn-vision-pipeline",
+  "lab:method/convolution-filter"
+ ],
+ "basedOn": [
+  "ahn2026nsee",
+  "video_nnsees8",
+  "hubel1959",
+  "maisak2013",
+  "fukushima1980",
+  "lecun1998",
+  "krizhevsky2012",
+  "zeiler2014",
+  "sabour2017"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-23",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/neural_see_lab/",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "domain": [
+  "ai"
+ ],
+ "suggestedCitation": "안상선 (2026). 신경망은 고양이를 어떻게 \"볼까\" — 쪽지시험 대비반. 신경망이 보는 법 연구실 (neural_see_lab) 0, v1.0."
+}

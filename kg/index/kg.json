@@ -1,0 +1,1088 @@
+{
+ "version": "1.0",
+ "page": "index",
+ "nodes": [
+  {
+   "id": "lab:concept/cnn-vision-pipeline",
+   "type": "Concept",
+   "label": {
+    "ko": "신경망이 그림을 보는 네 단계",
+    "en": "How a CNN sees: four steps"
+   },
+   "page": "index",
+   "anchor": "#map",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "숫자 격자 → 필터 → ReLU·풀링 → 깊은 층의 부품·전체"
+   },
+   "source": [
+    {
+     "ref": "lecun1998",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:concept/pixel-grid",
+   "type": "Concept",
+   "label": {
+    "ko": "픽셀 격자 (그림 = 숫자 표)",
+    "en": "Image as a pixel grid"
+   },
+   "page": "index",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "픽셀마다 진하기 숫자 하나, 16×16 = 256개"
+   }
+  },
+  {
+   "id": "lab:bio/photoreceptor-ommatidium",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "시각 세포·초파리 낱눈",
+    "en": "Photoreceptors and ommatidia"
+   },
+   "page": "index",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "한 점의 밝기를 맡는 생물의 감각 단위"
+   }
+  },
+  {
+   "id": "lab:method/convolution-filter",
+   "type": "Method",
+   "label": {
+    "ko": "3×3 필터 합성곱 (소벨 경계 필터)",
+    "en": "Convolution with 3×3 edge filters"
+   },
+   "page": "index",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "필터 숫자 × 진하기를 아홉 번 더해 점수, 196곳"
+   },
+   "source": [
+    {
+     "ref": "lecun1998",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:concept/edge-map",
+   "type": "Concept",
+   "label": {
+    "ko": "경계 지도 (특징 지도)",
+    "en": "Edge map (feature map)"
+   },
+   "page": "index",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "필터 점수를 자리마다 적은 14×14 표"
+   }
+  },
+  {
+   "id": "lab:bio/orientation-cell",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "방향 선택 세포 (고양이 시각 피질), T4·T5 (초파리)",
+    "en": "Orientation-selective cells; Drosophila T4/T5"
+   },
+   "page": "index",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "특정 방향의 경계에 크게 반응"
+   },
+   "source": [
+    {
+     "ref": "hubel1959",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/sign-is-direction",
+   "type": "Claim",
+   "label": {
+    "ko": "필터 점수의 부호는 방향, 크기는 세기 (−3.0은 반대 방향의 강한 경계)",
+    "en": "Sign encodes direction"
+   },
+   "page": "index",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/relu",
+   "type": "Method",
+   "label": {
+    "ko": "ReLU (음수는 0)",
+    "en": "ReLU"
+   },
+   "page": "index",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "max(0, x)"
+   }
+  },
+  {
+   "id": "lab:method/max-pooling",
+   "type": "Method",
+   "label": {
+    "ko": "2×2 최댓값 풀링 (14×14 → 7×7)",
+    "en": "Max pooling"
+   },
+   "page": "index",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "2×2마다 가장 큰 값 하나"
+   },
+   "source": [
+    {
+     "ref": "fukushima1980",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:bio/complex-cell",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "복합 세포",
+    "en": "Complex cells"
+   },
+   "page": "index",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "조금 넓은 범위 어디든 선이 있으면 반응"
+   },
+   "source": [
+    {
+     "ref": "hubel1959",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/pooling-shift",
+   "type": "Claim",
+   "label": {
+    "ko": "1픽셀 옮긴 고양이의 지도 닮음: 풀링 83.4%, 풀링 안 함 64.4%",
+    "en": "Pooling tolerates small shifts"
+   },
+   "page": "index",
+   "anchor": "#duel",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "ahn2026nsee",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:limitation/pooling-loses-position",
+   "type": "Limitation",
+   "label": {
+    "ko": "풀링은 정확한 자리를 흐린다",
+    "en": "Pooling blurs position"
+   },
+   "page": "index",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/receptive-field",
+   "type": "Concept",
+   "label": {
+    "ko": "보는 범위 (수용 영역) 3 → 4 → 8 → 10 → 18",
+    "en": "Receptive field growth"
+   },
+   "page": "index",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "층을 쌓을수록 한 점이 원본에서 보는 범위가 넓어짐"
+   }
+  },
+  {
+   "id": "lab:concept/feature-hierarchy",
+   "type": "Concept",
+   "label": {
+    "ko": "선 → 부품 → 전체 (특징의 위계)",
+    "en": "Feature hierarchy"
+   },
+   "page": "index",
+   "anchor": "#s4",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "깊은 층일수록 큰 모양에 반응"
+   },
+   "source": [
+    {
+     "ref": "zeiler2014",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/scrambled-fools-count",
+   "type": "Claim",
+   "label": {
+    "ko": "뒤섞인 고양이: 부품 5개를 모두 찾지만 자리 판정에서 탈락",
+    "en": "Part counting is fooled by scrambled faces"
+   },
+   "page": "index",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "sabour2017",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:limitation/hand-set-filters",
+   "type": "Limitation",
+   "label": {
+    "ko": "이 페이지의 필터·부품 탐지기는 사람이 정한 설명용 (실제는 학습)",
+    "en": "Filters are hand-set here"
+   },
+   "page": "index",
+   "anchor": "#sum",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "krizhevsky2012",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:sim/nsee-filter-scan",
+   "type": "Simulation",
+   "label": {
+    "ko": "필터 훑기 패널",
+    "en": "Filter scan lab"
+   },
+   "page": "index",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:sim/nsee-part-judge",
+   "type": "Simulation",
+   "label": {
+    "ko": "부품 판정 패널 (개수 vs 자리)",
+    "en": "Part judge lab"
+   },
+   "page": "index",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:task/nsee-exam",
+   "type": "Task",
+   "label": {
+    "ko": "쪽지시험 4문항 + 보너스",
+    "en": "Quiz: four items plus bonus"
+   },
+   "page": "index",
+   "anchor": "#exam",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/what-did-it-see",
+   "type": "Question",
+   "label": {
+    "ko": "AI가 \"고양이 99%\"라고 할 때 무엇을 보고 그렇게 말했나?",
+    "en": "What did the model look at?"
+   },
+   "page": "index",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/ahn2026nsee",
+   "type": "Work",
+   "label": {
+    "ko": "안 (2026) (주)M-Robo",
+    "en": "신경망이 보는 법 연구실 설명용 데이터 (16×16 픽셀 그림·필터·부품 탐지기)"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/video_nnsees8",
+   "type": "Work",
+   "label": {
+    "ko": "제작자 표기 없음 (n.d.) ",
+    "en": "HOW A NEURAL NET SEES · PART 8 (짧은 영상, 사용자 제공)"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/hubel1959",
+   "type": "Work",
+   "label": {
+    "ko": "Hubel 외 (1959) Journal of Physiology",
+    "en": "Receptive fields of single neurones in the cat's striate cortex"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/maisak2013",
+   "type": "Work",
+   "label": {
+    "ko": "Maisak 외 (2013) Nature",
+    "en": "A directional tuning map of Drosophila elementary motion detectors"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/fukushima1980",
+   "type": "Work",
+   "label": {
+    "ko": "Fukushima (1980) Biological Cybernetics",
+    "en": "Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by shift in position"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/lecun1998",
+   "type": "Work",
+   "label": {
+    "ko": "LeCun 외 (1998) Proceedings of the IEEE",
+    "en": "Gradient-based learning applied to document recognition"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/krizhevsky2012",
+   "type": "Work",
+   "label": {
+    "ko": "Krizhevsky 외 (2012) NeurIPS 2012",
+    "en": "ImageNet classification with deep convolutional neural networks"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/zeiler2014",
+   "type": "Work",
+   "label": {
+    "ko": "Zeiler 외 (2014) ECCV 2014",
+    "en": "Visualizing and understanding convolutional networks"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/sabour2017",
+   "type": "Work",
+   "label": {
+    "ko": "Sabour 외 (2017) NeurIPS 2017",
+    "en": "Dynamic routing between capsules"
+   },
+   "page": "index",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/nsee-0-q1-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "흑백 16×16 그림을 신경망에 넣으면 숫자가 몇 개 들어가나요?",
+    "en": "Quiz 0 q1-1"
+   },
+   "page": "index",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/nsee-0-q1-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "같은 크기(16×16)의 컬러 사진이라면 숫자는?",
+    "en": "Quiz 0 q1-2"
+   },
+   "page": "index",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/nsee-0-q2-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "3×3 필터가 16×16 그림 안에서 멈출 수 있는 자리는 모두 몇 곳인가요?",
+    "en": "Quiz 0 q2-1"
+   },
+   "page": "index",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/nsee-0-q2-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "세로 경계 필터의 점수가 −3.0이 나왔습니다. 맞는 해석은?",
+    "en": "Quiz 0 q2-2"
+   },
+   "page": "index",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/nsee-0-q3-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "ReLU를 거치면 −2.5, 0, 1.5는 각각 무엇이 되나요?",
+    "en": "Quiz 0 q3-1"
+   },
+   "page": "index",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/nsee-0-q3-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "14×14 지도를 2×2 최댓값 풀링하면 크기는?",
+    "en": "Quiz 0 q3-2"
+   },
+   "page": "index",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/nsee-0-q4-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "필터·풀링 층을 쌓을수록 한 점이 원본에서 \"보는 범위\"는?",
+    "en": "Quiz 0 q4-1"
+   },
+   "page": "index",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/nsee-0-q4-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "\"뒤섞인 고양이\"에 개수만 세는 판정기는 \"고양이\"라고 했습니다. 자리까지 보는 판정기는?",
+    "en": "Quiz 0 q4-2"
+   },
+   "page": "index",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:concept/cnn-vision-pipeline",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/pixel-grid",
+   "p": "lab:broader",
+   "o": "lab:topic/linear-algebra",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/convolution-filter",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/edge-map",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/relu",
+   "p": "lab:broader",
+   "o": "lab:topic/activation-function",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/max-pooling",
+   "p": "lab:broader",
+   "o": "lab:topic/pooling",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/receptive-field",
+   "p": "lab:broader",
+   "o": "lab:topic/receptive-field",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/feature-hierarchy",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/photoreceptor-ommatidium",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/orientation-cell",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/complex-cell",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/hand-set-filters",
+   "p": "lab:broader",
+   "o": "lab:topic/backpropagation",
+   "anchor": "#sum",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/what-did-it-see",
+   "p": "lab:broader",
+   "o": "lab:topic/interpretability",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/pooling-loses-position",
+   "p": "lab:broader",
+   "o": "lab:topic/pooling",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/pixel-grid",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/convolution-filter",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/convolution-filter",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/max-pooling",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/max-pooling",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/receptive-field",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/photoreceptor-ommatidium",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/pixel-grid",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/orientation-cell",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:method/convolution-filter",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/complex-cell",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:method/max-pooling",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/convolution-filter",
+   "p": "lab:partOf",
+   "o": "lab:concept/cnn-vision-pipeline",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/max-pooling",
+   "p": "lab:partOf",
+   "o": "lab:concept/cnn-vision-pipeline",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/relu",
+   "p": "lab:partOf",
+   "o": "lab:concept/cnn-vision-pipeline",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/edge-map",
+   "p": "lab:partOf",
+   "o": "lab:method/convolution-filter",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/sign-is-direction",
+   "p": "lab:supports",
+   "o": "lab:concept/edge-map",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/pooling-shift",
+   "p": "lab:supports",
+   "o": "lab:method/max-pooling",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/max-pooling",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/pooling-loses-position",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/pooling-loses-position",
+   "p": "lab:addressedBy",
+   "o": "lab:concept/feature-hierarchy",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/receptive-field",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/feature-hierarchy",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/scrambled-fools-count",
+   "p": "lab:supports",
+   "o": "lab:limitation/pooling-loses-position",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cnn-vision-pipeline",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/hand-set-filters",
+   "anchor": "#sum",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/nsee-filter-scan",
+   "p": "lab:demonstratedBy",
+   "o": "lab:method/convolution-filter",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:sim/nsee-part-judge",
+   "p": "lab:demonstratedBy",
+   "o": "lab:concept/feature-hierarchy",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:task/nsee-exam",
+   "p": "lab:assesses",
+   "o": "lab:concept/cnn-vision-pipeline",
+   "anchor": "#exam",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/what-did-it-see",
+   "p": "lab:addressedBy",
+   "o": "lab:sim/nsee-part-judge",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cnn-vision-pipeline",
+   "p": "lab:assertedIn",
+   "o": "lab:work/lecun1998",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/convolution-filter",
+   "p": "lab:assertedIn",
+   "o": "lab:work/lecun1998",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/orientation-cell",
+   "p": "lab:assertedIn",
+   "o": "lab:work/hubel1959",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/max-pooling",
+   "p": "lab:assertedIn",
+   "o": "lab:work/fukushima1980",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/complex-cell",
+   "p": "lab:assertedIn",
+   "o": "lab:work/hubel1959",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/pooling-shift",
+   "p": "lab:assertedIn",
+   "o": "lab:work/ahn2026nsee",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/feature-hierarchy",
+   "p": "lab:assertedIn",
+   "o": "lab:work/zeiler2014",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/scrambled-fools-count",
+   "p": "lab:assertedIn",
+   "o": "lab:work/sabour2017",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/hand-set-filters",
+   "p": "lab:assertedIn",
+   "o": "lab:work/krizhevsky2012",
+   "anchor": "#sum",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cnn-vision-pipeline",
+   "p": "lab:explainedIn",
+   "o": "lab:work/video_nnsees8",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cnn-vision-pipeline",
+   "p": "lab:explainedIn",
+   "o": "lab:work/maisak2013",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/nsee-0-q1-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/pixel-grid",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/nsee-0-q1-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/pixel-grid",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/nsee-0-q2-1",
+   "p": "lab:assesses",
+   "o": "lab:method/convolution-filter",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/nsee-0-q2-2",
+   "p": "lab:assesses",
+   "o": "lab:method/convolution-filter",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/nsee-0-q3-1",
+   "p": "lab:assesses",
+   "o": "lab:method/max-pooling",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/nsee-0-q3-2",
+   "p": "lab:assesses",
+   "o": "lab:method/max-pooling",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/nsee-0-q4-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/feature-hierarchy",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/nsee-0-q4-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/feature-hierarchy",
+   "anchor": "#s4",
+   "confidence": "high"
+  }
+ ]
+}
