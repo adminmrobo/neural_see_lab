@@ -1,0 +1,31 @@
+[사용법] 참고 그림 6장(박사·하루·초파리·주판봇·시아·모아)을 Genspark에 함께 올리고, 아래 줄 전체를 그대로 붙여 넣으세요.
+
+웹페이지 끝에 거는 아웃트로 장면 그림 1장을 만들어 줘.
+- 비율 3:2
+- 그림체는 반드시 16비트 RPG 픽셀아트 (네모 픽셀이 보이게, 매끈한 일러스트·벡터·수채화·3D 금지)
+- 첨부한 참고 이미지의 캐릭터를 같은 외형·같은 방향으로 (좌우 반전 금지)
+- 밝은 낮의 연구실, 흰 벽과 햇빛 (밤·어둠·네온 금지)
+- 그림 안에 글자·숫자·말풍선·로고 금지 (참고 그림의 이름표가 따라 들어오지 않게)
+아래 영어 프롬프트를 그대로 써 줘.
+
+Closing scene illustration, 3:2.
+Art style (required, always): detailed 16-bit SNES-era RPG pixel art, crisp visible square pixels, limited palette, bold dark outline (#1d1a22), 2-3 tone shading, small highlights; no smooth gradients, no vector, no anime cel painting, no watercolor, no 3D render.
+Match the attached reference images exactly in proportions, colors and pixel density.
+Height ratio: doctor 1.00, girl 0.90, interns 0.85, robot 0.72, fruit fly 0.41.
+Scene: the same bright daytime lab classroom the next day, white walls, sunlit windows, the white board still showing the pixelated 16x16 cat face with the blue 3x3 frame, now with a small pink ribbon pinned next to it (no letters).
+Characters:
+  young intern girl in a classic black-and-white maid-style uniform, straight black hair, front left, relieved happy smile, holding up her blank answer sheet with a big pink circle mark on it (no numbers);
+  young intern girl in a classic black-and-white maid-style uniform, wavy beige hair, front right, proud smile, giving a small cheer;
+  girl researcher, long pink hair with two round buns and a navy streak, blue eyes, white lab coat over lavender hoodie, jeans, between them, gentle proud smile, hands together;
+  chibi scientist, thin teal rectangular glasses, spiky black hair with one white streak, small ponytail at the back, white lab coat over black vest and tie, behind, nodding with a satisfied smile;
+  anthropomorphic fruit fly researcher, black body, big red compound eyes, blue helmet with a gold stripe and pink and blue cables, white lab coat over a black vest, black gloves, transparent wings, on the left facing right, holding a small coffee cup, nodding in acknowledgment;
+  boxy beige retro CRT-monitor robot, dark green screen face with mint pixel eyes and mouth, short antenna topped with a red-brown abacus bead, gray segmented arms, two small tank treads, on the right facing left, raising the wooden abacus happily, screen face showing a happy pixel smile.
+Mood: warm relief and quiet pride after passing the pop quiz; nobody is mocked.
+Composition: faces and hands inside the central area, simple bright background.
+No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands.
+
+[고칠 때 · 같은 대화에서]
+Same characters, same 16-bit pixel art style and composition. Change only: {고칠 점}. Still no text.
+
+[받은 뒤]
+저장 이름: sc_00_outro.png → 정수배 무손실 WebP img/sc_00_outro.webp로 넣습니다. (지금은 표정 그림 한 줄로 대신하는 자리입니다)

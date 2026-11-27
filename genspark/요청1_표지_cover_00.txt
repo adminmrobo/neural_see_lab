@@ -1,0 +1,34 @@
+[사용법] 참고 그림 6장(박사·하루·초파리·주판봇·시아·모아)을 Genspark에 함께 올리고, 아래 줄 전체를 그대로 붙여 넣으세요.
+
+웹페이지 맨 위에 거는 표지 그림 1장을 만들어 줘.
+- 비율 16:9, 가로 1920px 이상
+- 그림체는 반드시 16비트 RPG 픽셀아트 (네모 픽셀이 보이게, 매끈한 일러스트·벡터·수채화·3D 금지)
+- 첨부한 참고 이미지의 캐릭터를 같은 외형·같은 방향으로 (좌우 반전 금지)
+- 밝은 낮의 연구실, 흰 벽과 햇빛 (밤·어둠·네온 금지)
+- 그림 안에 글자·숫자·말풍선·로고 금지 (참고 그림의 이름표가 따라 들어오지 않게)
+아래 영어 프롬프트를 그대로 써 줘.
+
+Website top cover illustration, wide 16:9.
+Art style (required, always): detailed 16-bit SNES-era RPG pixel art, crisp visible square pixels, limited palette, bold dark outline (#1d1a22), 2-3 tone shading, small highlights; no smooth gradients, no vector, no anime cel painting, no watercolor, no 3D render.
+Match the attached reference images exactly in proportions, colors and pixel density.
+Height ratio: doctor 1.00, girl 0.90, interns 0.85, robot 0.72, fruit fly 0.41.
+Scene: bright daytime lab classroom, white walls, big windows with natural light, a white board, three teaching-material boxes on a desk, small lavender, mint and pink accents. No night, no neon.
+Characters:
+  chibi scientist, thin teal rectangular glasses, spiky black hair with one white streak, small ponytail at the back, white lab coat over black vest and tie, center back at a judges' desk, calm guiding gesture;
+  girl researcher, long pink hair with two round buns and a navy streak, blue eyes, white lab coat over lavender hoodie, jeans, front center, firm confident face, pointing at the board;
+  young intern girl in a classic black-and-white maid-style uniform, straight black hair, seated at the front desk on the left, slightly nervous;
+  young intern girl in a classic black-and-white maid-style uniform, wavy beige hair, seated next to her on the right, thinking face;
+  anthropomorphic fruit fly researcher, black body, big red compound eyes, blue helmet with a gold stripe and pink and blue cables, white lab coat over a black vest, black gloves, transparent wings, at the judges' desk on the left facing right, pointing with curiosity;
+  boxy beige retro CRT-monitor robot, dark green screen face with mint pixel eyes and mouth, short antenna topped with a red-brown abacus bead, gray segmented arms, two small tank treads, holding a wooden abacus, at the judges' desk on the right facing left.
+Visual metaphor of the topic: a big pixelated 16x16 cat face made of black and gray squares (two pointed ears, two square eyes, gray nose and mouth) pinned on the white board, with a blue square magnifying frame covering a 3x3 patch of it; next to it, rows of small green and amber squares forming edge lines; the two interns open their study notebooks for a pop quiz; the doctor, the fruit fly and the robot sit behind at the judges' desk with blank answer sheets.
+Composition: keep every face and hand inside the central safe area (12% margin left and right, 10% top, 18% bottom); keep the bottom-left corner plain, bright and simple.
+Mood: curious, warm, the nervous evening before a pop quiz turning into confidence.
+No text, no letters, no numbers, no logos, no weapons, no cigarettes, no alcohol, no blood, no real brands.
+
+[고칠 때 · 같은 대화에서]
+Same characters, same 16-bit pixel art style and composition. Change only: {고칠 점}. Still no text.
+
+[받은 뒤]
+저장 이름: cover_00.png
+픽셀 원래 격자(보통 받은 PNG의 1/4, 예 480×270)를 찾아 NEAREST 정수배로만 키운 무손실 WebP img/cover_00.webp(1920×1080)로 넣습니다.
+thumb_00(3:2)·og_00(1200×630)은 같은 그림을 가운데 기준으로 잘라 만듭니다.
