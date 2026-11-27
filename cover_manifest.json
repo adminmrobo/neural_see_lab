@@ -50,7 +50,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": "see docs/COVER_PROMPTS_neural_see_lab.md#cover_00",
    "source_of": null,
-   "status": "missing",
+   "status": "ok",
    "alt_ko": "쪽지시험 전날, 하루가 픽셀 고양이 그림 앞에서 인턴 둘을 가르치고 출제위원 셋이 뒤에서 지켜보는 강의실"
   },
   {
@@ -72,7 +72,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_00",
-   "status": "missing"
+   "status": "ok"
   },
   {
    "id": "og_00",
@@ -93,7 +93,7 @@
    "robot": "jupanbot-v2",
    "prompt_en": null,
    "source_of": "cover_00",
-   "status": "missing"
+   "status": "ok"
   }
  ],
  "updated": "2026-11-23"

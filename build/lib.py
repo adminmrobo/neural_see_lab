@@ -263,6 +263,8 @@ EXTRA_CSS = '''
 .crowd p{margin:0;font-size:14.5px;color:#3a3f5c}.crowd b{color:var(--c-x);font-size:13px;margin-right:4px}
 .scene{display:flex;gap:14px;justify-content:center;align-items:flex-end;flex-wrap:wrap;background:linear-gradient(#f7f9fc,#eaf0f7);border:1px solid var(--rule);border-radius:16px;padding:16px;margin:10px 0 6px}
 .scene img{width:96px;height:96px;object-fit:contain;image-rendering:pixelated}
+.scene.scimg{padding:0;overflow:hidden;display:block}
+.scene.scimg img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block}
 @media (max-width:520px){.scene img{width:56px;height:56px}}
 .codefold .codeline p{margin:0;font-size:14.5px}
 .mini-table td,.mini-table th{padding:4px 8px}
@@ -371,6 +373,12 @@ def build(path, *, title, desc, nav, cover_html, hero, body, gloss, quizzes, pag
         json.dumps(gloss, ensure_ascii=False), json.dumps(quizzes, ensure_ascii=False), page_js)
     doc = head + navh + cover_html + hero + '<main id="top">' + body + '</main>\n' + scripts + '</body></html>\n'
     doc = doc.replace('data-img="sc_outro"', 'data-img="sc_%s_outro"' % og[3:])
+    # 아웃트로 장면 그림(img/sc_XX_outro.webp)이 있으면 표정 그림 줄 대신 그 그림을 건다
+    sc_key = 'sc_%s_outro' % og[3:]
+    if os.path.exists(os.path.join(ROOT, 'img', sc_key + '.webp')):
+        doc = re.sub(r'(<div class="scene" data-img="%s" role="img" aria-label="([^"]*)">).*?(</div>)' % sc_key,
+                     lambda m: '<div class="scene scimg" data-img="%s" role="img" aria-label="%s"><img src="%simg/%s.webp" alt="" loading="lazy" decoding="async"></div>' % (
+                         sc_key, m.group(2), '../' * depth, sc_key), doc, count=1, flags=re.S)
     out = os.path.join(ROOT, path)
     os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, 'w', encoding='utf-8').write(doc)
